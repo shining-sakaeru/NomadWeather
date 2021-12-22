@@ -102,18 +102,20 @@ export default function App() {
           ))
         )}
       </ScrollView>
+      <View style={styles.toDo}></View>
     </View>
   );
 }
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "tomato",
+    backgroundColor: "orange",
   },
   city: {
-    flex: 1.2,
+    flex: 1,
     justifyContent: "center",
     alignItems: "center",
+    backgroundColor: "tomato",
   },
   cityName: {
     fontSize: 58,
@@ -149,5 +151,9 @@ const styles = StyleSheet.create({
     fontSize: 25,
     // backgroundColor: "black",
     color: "white",
+  },
+  toDo: {
+    flex: 1,
+    backgroundColor: "teal",
   },
 });
