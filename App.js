@@ -60,6 +60,9 @@ export default function App() {
         ) : (
           days.map((day, index) => (
             <View key={index} style={styles.day}>
+              <Text style={styles.days}>
+                {new Date(day.dt * 1000).toString().substring(0, 10)}
+              </Text>
               <Text style={styles.temp}>
                 {parseFloat(day.temp.day).toFixed(1)}
               </Text>
@@ -92,7 +95,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   temp: {
-    marginTop: 50,
+    marginTop: 10,
     fontWeight: "600",
     fontSize: 178,
   },
@@ -102,5 +105,11 @@ const styles = StyleSheet.create({
   },
   tinyText: {
     fontSize: 20,
+  },
+  days: {
+    marginTop: 50,
+    fontSize: 20,
+    backgroundColor: "black",
+    color: "white",
   },
 });
